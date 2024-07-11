@@ -19,7 +19,8 @@ class _LoginPageState extends State<LoginPage> {
             'Login',
             style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
           ),
-          TextInputField(hintText: "User ID")
+          TextInputField(hintText: "User ID"),
+          TextInputField(hintText: "Password")
         ],
       ),
     );
