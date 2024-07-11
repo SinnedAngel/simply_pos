@@ -11,10 +11,14 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            'Login',
+            style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
+          ),
           TextInputField(hintText: "User ID")
         ],
       ),
