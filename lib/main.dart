@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simply_pos/common/theme/theme.dart';
-import 'package:simply_pos/login/presenter/login_page.dart';
+import 'package:simply_pos/splash/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.darkThemeMode,
-      home: const LoginPage(),
+      home: const SplashPage(), //LoginPage(),
     );
   }
 }
