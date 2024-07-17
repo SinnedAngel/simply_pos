@@ -5,19 +5,18 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-        child: Align(
-            alignment: Alignment.center,
+    return const Scaffold(
+        body: Center(
             child: Column(
-              children: [
-                Text(
-                  'Simply POS',
-                  style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromRGBO(239, 154, 154, 1)),
-                )
-              ],
-            )));
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text('Simply POS',
+            style: TextStyle(
+              fontSize: 50,
+              fontWeight: FontWeight.bold,
+              color: Colors.blueGrey,
+            ))
+      ],
+    )));
   }
 }
