@@ -10,6 +10,10 @@ class SplashPage extends StatelessWidget {
             child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        Image(
+          image: AssetImage('assets/simply.jpeg'),
+          width: 200,
+        ),
         Text('Simply POS',
             style: TextStyle(
               fontSize: 50,
