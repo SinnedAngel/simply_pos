@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simply_pos/login/presenter/login_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -7,24 +8,24 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
-            child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+            child: Stack(
+      alignment: Alignment.center,
       children: [
         TweenAnimationBuilder(
           tween: Tween<double>(begin: 0, end: 1),
           duration: const Duration(milliseconds: 500),
           child: const Image(
             image: AssetImage('assets/simply.png'),
-            width: 200,
+            width: 400,
           ),
           builder: (context, value, child) => Opacity(
             opacity: 1,
             child: Padding(
-              padding: EdgeInsets.only(bottom: value * 20),
+              padding: EdgeInsets.only(bottom: value * 120),
               child: child,
             ),
           ),
-        ), 
+        ),
         TweenAnimationBuilder(
           tween: Tween<double>(begin: 0, end: 1),
           duration: const Duration(milliseconds: 1000),
@@ -37,10 +38,14 @@ class SplashPage extends StatelessWidget {
           builder: (context, value, child) => Opacity(
             opacity: value,
             child: Padding(
-              padding: EdgeInsets.only(top: value * 20),
+              padding: EdgeInsets.only(top: value * 120),
               child: child,
             ),
           ),
+          onEnd: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const LoginPage()));
+          },
         )
       ],
     )));
