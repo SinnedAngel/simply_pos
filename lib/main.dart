@@ -1,21 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:simply_pos/common/theme/theme.dart';
 import 'package:simply_pos/splash/splash_page.dart';
+import 'package:simply_pos/test_widget_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const SimplyApp());
+  // runApp(const PageBuilderApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SimplyApp extends StatelessWidget {
+  const SimplyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Simply POS',
       theme: AppTheme.darkThemeMode,
       home: const SplashPage(), //LoginPage(),
+    );
+  }
+}
+
+class PageBuilderApp extends StatelessWidget {
+  const PageBuilderApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: AppTheme.darkThemeMode,
+      home: const TestWidgetPage(), //LoginPage(),
     );
   }
 }
