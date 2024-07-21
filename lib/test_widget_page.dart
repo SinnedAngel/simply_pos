@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simply_pos/common/widget/buttons.dart';
 
 class TestWidgetPage extends StatelessWidget {
   const TestWidgetPage({super.key});
@@ -9,7 +10,9 @@ class TestWidgetPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Test Page'),
       ),
-      body: const Text('text'),
+      body: const Center(
+        child: PrimaryButton(buttonText: 'Button'),
+      ),
     );
   }
 }
