@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:simply_pos/login/presenter/login_page.dart';
 
@@ -43,8 +45,10 @@ class SplashPage extends StatelessWidget {
             ),
           ),
           onEnd: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const LoginPage()));
+            Timer(const Duration(milliseconds: 500), () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
+            });
           },
         )
       ],
