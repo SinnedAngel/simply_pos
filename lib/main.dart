@@ -18,7 +18,7 @@ class SimplyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Simply POS',
       theme: AppTheme.darkThemeMode,
-      home: const SplashPage(), //LoginPage(),
+      home: const SplashPage(),
     );
   }
 }
@@ -31,7 +31,7 @@ class PageBuilderApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.darkThemeMode,
-      home: const TestWidgetPage(),
+      home: const LoginPage(),
     );
   }
 }

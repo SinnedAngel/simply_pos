@@ -10,8 +10,11 @@ class TestWidgetPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Test Page'),
       ),
-      body: const Center(
-        child: PrimaryButton(buttonText: 'Button'),
+      body: Center(
+        child: PrimaryButton(
+          buttonText: 'Button',
+          onPressed: () {},
+        ),
       ),
     );
   }
