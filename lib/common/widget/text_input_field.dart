@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 
 class TextInputField extends StatelessWidget {
   final String hintText;
+  final bool obscureText;
   const TextInputField({
     super.key,
-    required this.hintText,
+    this.hintText = '',
+    this.obscureText = false,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: hintText
+        hintText: hintText,
       ),
+      obscureText: obscureText,
     );
   }
 }
