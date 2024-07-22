@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simply_pos/common/theme/pallete.dart';
-import 'package:simply_pos/common/theme/theme.dart';
+import 'package:simply_pos/common/widget/buttons.dart';
 import 'package:simply_pos/common/widget/text_input_field.dart';
 
 class LoginPage extends StatefulWidget {
@@ -34,28 +33,18 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 15,
               ),
-              const TextInputField(hintText: "Password"),
-              const SizedBox(
-                height: 30,
+              const TextInputField(
+                hintText: "Password",
+                obscureText: true,
               ),
-              Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: AppPallete.secondayColor),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    fixedSize: const Size(200, 50),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    'Log In',
-                    style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-              )
+              const SizedBox(
+                height: 50,
+              ),
+              PrimaryButton(
+                buttonText: 'Log In',
+                height: 60,
+                onPressed: () {},
+              ),
             ],
           ),
         ),
