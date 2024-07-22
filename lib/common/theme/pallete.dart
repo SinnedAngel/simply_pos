@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppPallete {
-  static const Color backgroundColor = Color.fromRGBO(117, 117, 117, 1);
-  static const Color primaryColor = Colors.black;
-  static const Color secondayColor = Color.fromRGBO(187, 222, 251, 1);
-  static const Color borderColor = Colors.grey;
-  static const Color focusedBorderColor = Colors.blueGrey;
+  static const Color backgroundColor = Colors.brown;
+  static const Color primaryColor = Color.fromRGBO(62, 39, 35, 1);
+  static const Color secondayColor = Color.fromRGBO(239, 235, 233, 1);
+  static const Color borderColor = Color.fromRGBO(93, 64, 55, 1);
+  static const Color focusedBorderColor = Color.fromRGBO(141, 110, 99, 1);
 }

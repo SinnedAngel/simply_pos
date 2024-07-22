@@ -12,12 +12,13 @@ class AppTheme {
       );
   static final darkThemeMode = ThemeData.dark().copyWith(
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.blue,
+      seedColor: AppPallete.primaryColor,
+      surface: AppPallete.backgroundColor,
     ),
     appBarTheme: const AppBarTheme(
-      color: Colors.blueGrey,
+      color: AppPallete.backgroundColor,
       titleTextStyle: TextStyle(
-        color: Colors.white,
+        color: AppPallete.secondayColor,
         fontWeight: FontWeight.bold,
         letterSpacing: 1.5,
         fontSize: 20,
@@ -43,5 +44,6 @@ class AppTheme {
         shadowColor: Colors.transparent,
       ),
     ),
+    scaffoldBackgroundColor: AppPallete.backgroundColor
   );
 }
