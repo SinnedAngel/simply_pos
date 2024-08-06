@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:simply_pos/common/theme/theme.dart';
+import 'package:simply_pos/core/enc/encrypted.dart';
 import 'package:simply_pos/login/presenter/login_page.dart';
 import 'package:simply_pos/splash/splash_page.dart';
 import 'package:simply_pos/test_widget_page.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  await Supabase.initialize(
+    url: Encrypted.supabaseUrl,
+    anonKey: Encrypted.supabaseAnonKey,
+  );
+
   // runApp(const SimplyApp());
   runApp(const PageBuilderApp());
 }
