@@ -1,14 +1,14 @@
 import 'package:simply_pos/core/data/errors.dart';
-import 'package:simply_pos/core/data/responses.dart';
-import 'package:simply_pos/login/data/login_remote_data_source.dart';
-import 'package:simply_pos/login/domain/login_repository.dart';
+import 'package:simply_pos/core/data/result.dart';
+import 'package:simply_pos/auth/data/login_remote_data_source.dart';
+import 'package:simply_pos/auth/domain/login_repository.dart';
 
 class LoginRepositoryImpl implements LoginRepository {
   final LoginRemoteDataSource remoteDataSource;
   const LoginRepositoryImpl(this.remoteDataSource);
 
   @override
-  Future<Response> login({
+  Future<Result> login({
     required String userId,
     required String password,
   }) async {

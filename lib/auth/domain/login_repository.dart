@@ -1,7 +1,7 @@
-import 'package:simply_pos/core/responses.dart';
+import 'package:simply_pos/core/data/result.dart';
 
 abstract interface class LoginRepository {
-  Future<Response> login({
+  Future<Result> login({
     required String userId,
     required String password,
   });

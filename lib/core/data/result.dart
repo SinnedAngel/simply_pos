@@ -1,12 +1,12 @@
-abstract class Response {}
+abstract class Result {}
 
-class Success<T> extends Response {
+class Success<T> extends Result {
   late T data;
  
   Success(this.data);
 }
 
-class Error extends Response {
+class Error extends Result {
   late String errorCode;
   late String errorMessage;
 
