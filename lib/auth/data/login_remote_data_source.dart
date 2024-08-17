@@ -1,12 +1,9 @@
-import 'dart:convert';
 
 import 'package:simply_pos/core/data/errors.dart';
 import 'package:simply_pos/core/enc/database_library.dart';
-import 'package:simply_pos/core/enc/encrypted.dart';
 import 'package:simply_pos/auth/data/error_messages.dart';
 import 'package:simply_pos/auth/data/model/user_dto.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:crypto/crypto.dart';
 
 abstract interface class LoginRemoteDataSource {
   Future<UserDto> login({
