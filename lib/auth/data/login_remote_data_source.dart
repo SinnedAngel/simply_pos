@@ -43,7 +43,7 @@ class LoginRemoteDataSourceImpl extends LoginRemoteDataSource {
     var userDto = UserDto(
         id: data[DatabaseLibrary.tabUserColId],
         userId: data[DatabaseLibrary.tabUserColUserId],
-        roles: data[DatabaseLibrary.tabUserColRole]);
+        role: data[DatabaseLibrary.tabUserColRole]);
 
     return userDto;
   }
